@@ -167,3 +167,27 @@ Automaton getAutomaton()
 
     return automaton;
 }
+
+bool getImageOption()
+{
+    while (true)
+    {
+        std::cout << "DESEJA EXIBIR O RESULTADO DA SIMULACAO [s-S/n-N]? ";
+        char option;
+        std::cin >> option;
+
+        if (std::cin.fail() || (option != 's' && option != 'S' && option != 'n' && option != 'N'))
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "ENTRADA INVALIDA!\n";
+        }
+        else
+            return (option == 's' || option == 'S');
+    }   
+}
+
+void promptEndGame()
+{
+    std::cout << "SIMULACAO FINALIZADA COM SUCESSO!\n";
+}

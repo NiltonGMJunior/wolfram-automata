@@ -45,6 +45,9 @@ bool handleMenuOption(Game &game, const unsigned int option)
         case 6:
             // Iniciar o jogo
             beginGame(game);
+            promptEndGame();
+            if (getImageOption())
+                system("open ./output.ppm");
             break;
         case 7:
             // Terminar o programa

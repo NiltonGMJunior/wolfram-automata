@@ -42,4 +42,10 @@ Automaton getAutomaton();
 // Imprime o estado de um automato
 void printAutomaton(Automaton &automaton);
 
+// Decide se a imagem será exibida no final da simulação
+bool getImageOption();
+
+// Exibe a mensagem de finalização de simulação
+void promptEndGame();
+
 #endif
