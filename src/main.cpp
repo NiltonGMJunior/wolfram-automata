@@ -47,7 +47,8 @@ bool handleMenuOption(Game &game, const unsigned int option)
             beginGame(game);
             promptEndGame();
             if (getImageOption())
-                system("open ./output.ppm");
+                // system("./output.ppm"); // Windows
+                system("xdg-open ./output.ppm"); // Linux
             break;
         case 7:
             // Terminar o programa

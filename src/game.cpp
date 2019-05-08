@@ -16,7 +16,7 @@ void beginGame(Game &game)
     for (unsigned int iii = 0; iii < game.iterations + 1; ++iii)
     {
         printAutomaton(game.state);
+        printStateToImage(game, image);        
         game.state = updateAutomaton(game.state, game.rule);
-        printStateToImage(game, image);
     }
 }
